@@ -53,12 +53,7 @@
             />
           </a>
 
-          <RouterLink
-            to="/"
-            class="p-2 menu"
-            :class="{ active: isActive }"
-            @click="toggleActive(1)"
-          >
+          <RouterLink to="/" class="p-2 menu" :class="{ active: isActive }">
             <div class="flex justify-start items-center">
               <svg
                 class="h-6 sm:h-7"
@@ -88,7 +83,6 @@
             to="/bag"
             class="p-2 menu mr-"
             :class="{ active: isActive }"
-            @click="toggleActive(2)"
           >
             <div class="flex justify-start items-center">
               <svg
@@ -122,14 +116,14 @@
     <!--  -->
 
     <!-- content -->
-    <div class="sm:ml-[112px] w-[953px] border border-red-400">
+    <div class="sm:ml-[112px] w-[953px]">
       <slot />
     </div>
     <!-- content -->
 
     <!-- bag -->
     <div class="bag w-[345px] border-l-4 border-[#1A1F1680] min-h-screen">
-      <Bag />
+      <Bag @childEvent="toggleActive" />
     </div>
     <!--  -->
   </div>
@@ -140,7 +134,7 @@ import Bag from "@/components/Bag";
 import { useRoute } from "vue-router";
 import { ref, onMounted } from "vue";
 
-const isActive1 = ref(true);
+const isActive1 = ref(false);
 const isActive2 = ref(false);
 const extendSidebar = ref(false);
 
@@ -156,7 +150,7 @@ const checkActive = () => {
   }
 };
 onMounted(() => {
-  checkActive();
+  // checkActive();
 });
 const toggleActive = (buttonNumber) => {
   if (buttonNumber === 1) {
@@ -181,6 +175,8 @@ const handleSideBar = () => {
 
 .menu.router-link-exact-active {
   border-radius: 10px;
-  background: #1a1f16;
+  /* background: #1a1f16; */
+  background: #ffffff;
+  border: solid 1px #1a1f16;
 }
 </style>
