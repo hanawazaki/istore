@@ -253,10 +253,53 @@
       </div>
 
       <!-- order summary-->
-      <div
-        class="checkout rounded-xl p-4 flex flex-col gap-2 bg-white flex-auto w-3/12 h-60"
-      >
-        <h5 class="text-xl">Order Summary</h5>
+      <div class="w-3/12 h-auto">
+        <!-- checkout card -->
+        <div
+          class="checkout rounded-xl p-4 flex flex-col gap-2 bg-white flex-auto mb-[25px]"
+        >
+          <h5 class="textBodyMN">Order Summary</h5>
+          <div class="flex justify-between">
+            <h6 class="textBodySM text-tertiary">Items:</h6>
+            <h6 class="textBodySM text-tertiary">$ 5849.37</h6>
+          </div>
+          <div class="flex justify-between">
+            <h6 class="textBodySM text-tertiary">Shipping:</h6>
+            <h6 class="textBodySM text-tertiary">$ 6.99</h6>
+          </div>
+          <div class="flex justify-between">
+            <h6 class="textBodySM text-tertiary">Estimated GST:</h6>
+            <h6 class="textBodySM text-tertiary">$ 760.41</h6>
+          </div>
+          <div class="flex justify-between">
+            <h6 class="textBodySM text-tertiary">Gift Card:</h6>
+            <h6 class="textBodySM text-tertiary">$ 0.00</h6>
+          </div>
+          <hr />
+          <div class="flex justify-between">
+            <h6 class="textBodyMN text-danger">Order Total:</h6>
+            <h6 class="textBodyMN text-danger">$ 6609.78</h6>
+          </div>
+          <hr />
+          <Button
+            :isicon="false"
+            bgColor="bg-dark"
+            name="Place your order"
+            textColor="white"
+          ></Button>
+        </div>
+        <!--  -->
+        <div class="flex justify-end">
+          <Button
+            :Isicon="true"
+            icon="back-icon.svg"
+            bgColor="bg-transparent"
+            :border="true"
+            name="Back"
+            textColor="dark"
+            link="/"
+          />
+        </div>
       </div>
     </div>
   </div>
