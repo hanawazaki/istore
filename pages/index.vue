@@ -1,19 +1,19 @@
 <template>
-  <main class="p-6 storefront mx-auto">
-    <div class="top-bar p-2 mx-auto w-[507px] mb-5">
+  <main class="container p-1 md:p-6 storefront mx-auto">
+    <div class="top-bar p-2 mx-auto w-auto xl:w-[507px] mb-5">
       <div class="flex flex-col gap-2">
-        <label class="text-[#60695C] text-base font-normal ml-2"
+        <label class="text-tertiary text-xs md:text-bodySmall ml-2"
           >Search Item</label
         >
         <input
           type="text"
           placeholder="Apple Watch, Samsung S21, Macbook Pro, ..."
-          class="rounded-xl bg-white text-[#1A1F1680] opacity-50 text-xl font-medium"
+          class="rounded-xl bg-white text-placeholder opacity-50 text-bodySmall md:text-bodyNormal"
         />
       </div>
     </div>
 
-    <div class="grid grid-cols-4 gap-4 mb-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 mb-4 gap-2">
       <div
         v-for="(item, index) in data"
         :key="index"
@@ -38,7 +38,7 @@ const data = ref([
     title: "Apple Watch",
     image: "../assets/images/iwatch.png",
     description: "Series 5 SE",
-    price: "$ 529.99",
+    price: "529.99",
     isLarge: false,
   },
   {

@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: #ededed;
+}
+@layer components {
+  .textBodyMN {
+    @apply text-2xl font-medium leading-normal;
+  }
+
+  .textBodySM {
+    @apply text-base font-normal leading-normal tracking-032;
+  }
+}
